@@ -3,7 +3,6 @@ use crate::time::*;
 
 pub struct PerformanceCounter {}
 
-
 impl PerformanceCounter
 {
 	#[inline]
@@ -17,5 +16,4 @@ impl PerformanceCounter
 	{
 		unsafe { sdl2::sys::SDL_GetPerformanceCounter() }
 	}
-
 }

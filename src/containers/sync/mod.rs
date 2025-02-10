@@ -2,6 +2,7 @@ pub use std::sync::{mpsc,
                     Arc,
                     Mutex,
                     OnceLock,
-                    RwLock};
+                    RwLock,
+                    LazyLock};
 
 pub use std::sync::atomic::*;

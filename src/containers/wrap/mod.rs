@@ -1,4 +1,5 @@
 pub use rccell::*;
 pub use std::cell::{OnceCell,
-                    RefCell};
+                    RefCell,
+                    LazyCell,};
 pub use std::rc::Rc;

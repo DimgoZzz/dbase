@@ -10,13 +10,13 @@ impl DeltaClock
 {
 	pub fn new() -> Self
 	{
-		Self { last_stamp : TimeStamp::from_now(),
+		Self { last_stamp : TimeStamp::now(),
 		       delta :      TimeStamp::new(1), }
 	}
 
 	pub fn tick(&mut self)
 	{
-		let new_stamp = TimeStamp::from_now();
+		let new_stamp = TimeStamp::now();
 		self.delta = new_stamp - self.last_stamp;
 		self.last_stamp = new_stamp;
 	}

@@ -1,9 +1,12 @@
+use crate::containers::sync::*;
 use crate::time::*;
+
+
 
 #[derive(Copy, Clone, Eq, PartialEq, PartialOrd, Ord, Hash, Debug)]
 pub struct TimeStamp
 {
-	tick : TimeTick,
+	pub tick : TimeTick,
 }
 
 impl TimeStamp
@@ -13,9 +16,13 @@ impl TimeStamp
 		Self { tick }
 	}
 
-	pub fn from_now() -> Self
+	pub fn now() -> Self
 	{
 		Self::new(PerformanceCounter::count())
+	}
+	
+	pub fn elapsed_since(self, since: TimeStamp)->Self{
+		self-since
 	}
 
 }
@@ -81,9 +88,6 @@ impl<'a> std::fmt::Display for TimeStamp
 		let ticks_in_min = frequency * 60;
 		let ticks_in_ms = frequency / 1000;
 
-		let h = ticks / ticks_in_hour;
-		ticks = ticks - h * ticks_in_hour;
-
 		let m = ticks / ticks_in_min;
 		ticks = ticks - m * ticks_in_min;
 
@@ -92,6 +96,6 @@ impl<'a> std::fmt::Display for TimeStamp
 
 		let ms = ticks / ticks_in_ms;
 		ticks = ticks - ms * ticks_in_ms;
-		write!(f, "{h}:{m:0>2}:{s:0>2}.{ms:0>3}|{ticks:0>6}")
+		write!(f, "{m:0>2}:{s:0>2}.{ms:0>3}|{ticks:0>6}")
 	}
 }
