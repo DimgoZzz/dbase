@@ -3,7 +3,7 @@ use crate::time::*;
 #[derive(Copy, Clone, Eq, PartialEq, PartialOrd, Ord, Hash, Debug)]
 pub struct TimeStamp
 {
-	pub(crate) tick : TimeTick,
+	tick : TimeTick,
 }
 
 impl TimeStamp
@@ -17,6 +17,7 @@ impl TimeStamp
 	{
 		Self::new(PerformanceCounter::count())
 	}
+
 }
 
 impl TimeStamp
