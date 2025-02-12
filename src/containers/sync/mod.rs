@@ -1,8 +1,8 @@
 pub use std::sync::{mpsc,
                     Arc,
+                    LazyLock,
                     Mutex,
                     OnceLock,
-                    RwLock,
-                    LazyLock};
+                    RwLock};
 
 pub use std::sync::atomic::*;

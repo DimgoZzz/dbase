@@ -1,8 +1,6 @@
 use crate::containers::sync::*;
 use crate::time::*;
 
-
-
 #[derive(Copy, Clone, Eq, PartialEq, PartialOrd, Ord, Hash, Debug)]
 pub struct TimeStamp
 {
@@ -20,11 +18,13 @@ impl TimeStamp
 	{
 		Self::new(PerformanceCounter::count())
 	}
-	
-	pub fn elapsed_since(self, since: TimeStamp)->Self{
-		self-since
-	}
 
+	pub fn elapsed_since(self,
+	                     since : TimeStamp)
+	                     -> Self
+	{
+		self - since
+	}
 }
 
 impl TimeStamp
