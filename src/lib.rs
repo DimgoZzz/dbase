@@ -4,7 +4,7 @@ pub mod error;
 pub mod external;
 pub mod file;
 pub mod math;
+pub mod ptr;
 pub mod sync;
 pub mod text;
 pub mod time;
-pub mod ptr;
