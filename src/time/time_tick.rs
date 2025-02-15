@@ -1,5 +1,6 @@
-use crate::containers::sync::*;
-use crate::time::*;
+use super::{DeltaTime,
+            PerformanceCounter,
+            TimeTick};
 
 #[derive(Copy, Clone, Eq, PartialEq, PartialOrd, Ord, Hash, Debug)]
 pub struct TimeStamp
@@ -84,7 +85,6 @@ impl<'a> std::fmt::Display for TimeStamp
 		// TODO: fix me
 		let frequency = PerformanceCounter::frequency_per_sec();
 		let mut ticks = self.tick;
-		let ticks_in_hour = frequency * 60 * 60;
 		let ticks_in_min = frequency * 60;
 		let ticks_in_ms = frequency / 1000;
 

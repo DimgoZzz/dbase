@@ -5,7 +5,11 @@ edition = "2021"
 
 [dependencies]
 ##########  Core       ##########
+<<<<<<< HEAD
 sdl2 = {version = "0.37.0", features = ["bundled"]}
+=======
+sdl2 = {version = "0.37.0",features = ["bundled"]}
+>>>>>>> e017460 (refactor: mix)
 
 ##########  Utilities  ##########
 cfg-if = "1.0.0"
