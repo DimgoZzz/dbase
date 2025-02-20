@@ -5,8 +5,7 @@ edition = "2021"
 
 [dependencies]
 ##########  Core       ##########
-sdl2 = {version = "0.37.0", features = ["bundled","raw-window-handle"]}
-ash = {version = "0.38.0+1.3.281",features = ["linked"]}
+sdl3 = {version = "0.14.11", features = ["build-from-source","raw-window-handle"]}
 
 ##########  Utilities  ##########
 cfg-if = "1.0.0"

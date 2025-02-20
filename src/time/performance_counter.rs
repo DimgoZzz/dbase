@@ -1,4 +1,4 @@
-use crate::external::sdl2;
+use crate::external::sdl3;
 use crate::time::*;
 
 pub struct PerformanceCounter {}
@@ -8,12 +8,12 @@ impl PerformanceCounter
 	#[inline]
 	pub fn frequency_per_sec() -> TimeTick
 	{
-		unsafe { sdl2::sys::SDL_GetPerformanceFrequency() }
+		sdl3::timer::performance_frequency()
 	}
 
 	#[inline]
 	pub fn count() -> TimeTick
 	{
-		unsafe { sdl2::sys::SDL_GetPerformanceCounter() }
+		sdl3::timer::performance_counter()
 	}
 }
