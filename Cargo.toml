@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 ##########  Core       ##########
-sdl2 = {version = "0.37.0", features = ["bundled"]}
+sdl2 = {version = "0.37.0", features = ["bundled","raw-window-handle"]}
 ash = {version = "0.38.0+1.3.281",features = ["linked"]}
 
 ##########  Utilities  ##########
