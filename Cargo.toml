@@ -1,13 +1,9 @@
 [package]
-name = "dbase"
+name = "dstd"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-##########  Core       ##########
-sdl3 = {version = "0.14.11", features = ["build-from-source","raw-window-handle"]}
-
-##########  Utilities  ##########
 cfg-if = "1.0.0"
 macro-bits = "0.1.5"
 bitflags ="2.8.0"
