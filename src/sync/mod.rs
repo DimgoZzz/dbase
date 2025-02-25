@@ -1,5 +1,6 @@
 pub use std::sync::{mpsc,
                     Arc,
+                    LazyLock,
                     Mutex,
                     OnceLock,
                     RwLock};

@@ -1,3 +1,5 @@
 mod dcfg_if;
 pub use dcfg_if::*;
-pub mod version;
+
+mod version;
+pub use version::*;
