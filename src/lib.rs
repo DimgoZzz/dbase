@@ -1,10 +1,12 @@
+pub mod cell;
 pub mod collections;
 pub mod common;
 pub mod derive;
 pub mod error;
 pub mod file;
 pub mod math;
-pub mod ptr;
+pub mod mem;
+pub mod rc;
 pub mod sync;
 pub mod text;
 pub mod time;
