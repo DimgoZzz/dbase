@@ -1,5 +1,6 @@
 pub mod collections;
 pub mod common;
+pub mod derive;
 pub mod error;
 pub mod file;
 pub mod math;
